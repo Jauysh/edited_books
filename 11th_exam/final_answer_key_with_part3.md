@@ -14,48 +14,96 @@
 5. **b) "Student Name"**
 
 ### Part 2: Programming Tasks (12 points)
-*(Same solutions as previous answer key)*
+
+**Task A: Array Sum**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+    int sum = 0;
+    
+    cout << "Enter 5 integers: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+    
+    cout << "Sum = " << sum << endl;
+    return 0;
+}
+```
+
+**Task B: Student Name Display**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    char name[20];
+    
+    name[0] = 'I'; name[1] = 'o'; name[2] = 'n'; name[3] = '\0';
+    cout << "Student name: " << name << endl;
+    
+    return 0;
+}
+```
+
+**Task C: 2x3 Matrix Sum**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int matrix[2][3];
+    int sum = 0;
+    
+    cout << "Enter 2x3 matrix:" << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> matrix[i][j];
+            sum += matrix[i][j];
+        }
+    }
+    
+    cout << "Sum of all elements: " << sum << endl;
+    return 0;
+}
+```
 
 ### Part 3: Theory Application (10 points)
 
-**Question 1: Student Grades Structure**
+**Question 1: Simple vs Composite Data Types**
 **Expected Answer:**
-For representing grades of 30 students in 5 subjects, I would use:
-- **Data Type:** Two-dimensional array
-- **Structure:** `float grades[30][5]`
-- **Explanation:** 
-  - Rows represent students (30 students)
-  - Columns represent subjects (5 subjects)
-  - `grades[i][j]` would store grade of student i in subject j
-- **Alternative:** Could use array of structures, but 2D array is simpler for this case
+**Simple data types** store single values:
+- Examples: integer, float, char, boolean
+- Used for individual pieces of data like age (int), temperature (float), letter grade (char)
+
+**Composite data types** aggregate multiple simple data:
+- Examples: arrays, strings
+- Used for collections of related data like student names (string), daily temperatures (array)
+
+**Key difference:** Simple types store one value, composite types store multiple related values.
 
 **Grading (5 points):**
-- Appropriate data type selection: 2 points
-- Correct structure design: 2 points
-- Clear explanation: 1 point
+- Clear definition of simple types: 1 point
+- Clear definition of composite types: 1 point
+- Correct examples: 2 points
+- Clear difference explanation: 1 point
 
-**Question 2: Char Arrays vs String Type**
+**Question 2: Electricity Consumption Data Structure**
 **Expected Answer:**
-**Char Arrays:**
-- Fixed size, must specify maximum length
-- Manual memory management
-- **Advantages:**
-  1. More control over memory usage
-  2. Direct access to individual characters
-- **Use when:** Working with fixed-length data or interfacing with C libraries
-
-**String Type:**
-- Dynamic size, automatic memory management
-- Built-in functions and operators
-- **Advantages:**
-  1. Easier to use and more intuitive
-  2. Automatic memory management
-- **Use when:** General string operations, especially when length is unknown
+For daily electricity consumption for a month:
+- **Data Structure:** One-dimensional array
+- **Type:** `float consumption[31]` or `float consumption[32]` (for intuitive indexing)
+- **Why:** Each day's consumption is a single value, so a 1D array is sufficient
+- **Alternative:** Could use 2D array but that would be overkill for this simple case
 
 **Grading (5 points):**
-- Clear distinction: 2 points
-- Two advantages for each: 2 points
-- Appropriate usage scenarios: 1 point
+- Correct data structure choice: 2 points
+- Appropriate type selection: 1 point
+- Clear reasoning: 2 points
 
 ---
 
@@ -69,44 +117,108 @@ For representing grades of 30 students in 5 subjects, I would use:
 5. **c) char array or string**
 
 ### Part 2: Programming Tasks (12 points)
-*(Same solutions as previous answer key)*
+
+**Task A: Find Largest Number**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+    int max;
+    
+    cout << "Enter 5 integers: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> arr[i];
+    }
+    
+    max = arr[0];
+    for(int i = 1; i < 5; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    
+    cout << "Largest number: " << max << endl;
+    return 0;
+}
+```
+
+**Task B: Name and Surname**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    char name[20], surname[20];
+    
+    cout << "Enter name: ";
+    cin >> name;
+    cout << "Enter surname: ";
+    cin >> surname;
+    
+    cout << "Name: " << name << endl;
+    cout << "Surname: " << surname << endl;
+    
+    return 0;
+}
+```
+
+**Task C: Array Copy**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int original[5], copy[5];
+    
+    cout << "Enter 5 integers: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> original[i];
+        copy[i] = original[i];
+    }
+    
+    cout << "Copied array: ";
+    for(int i = 0; i < 5; i++) {
+        cout << copy[i] << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
+```
 
 ### Part 3: Theory Application (10 points)
 
-**Question 1: Weather Data Structure**
+**Question 1: Simple and Composite Data Types Examples**
 **Expected Answer:**
-For temperature data every hour for 7 days:
-- **Data Type:** Two-dimensional array
-- **Structure:** `float temperature[7][24]`
-- **Explanation:**
-  - Rows represent days (7 days)
-  - Columns represent hours (24 hours per day)
-  - `temperature[i][j]` stores temperature on day i at hour j
-- **Reasoning:** 2D array naturally represents the tabular structure of days × hours
+**Simple data types:**
+- integer (int) - for whole numbers like age, count
+- float (real) - for decimal numbers like temperature, price
+- char - for single characters like letter grades
+- boolean (bool) - for true/false values
+
+**Composite data types:**
+- Arrays - for collections of related data like daily temperatures
+- Strings - for text data like student names
 
 **Grading (5 points):**
-- Appropriate data type: 2 points
-- Correct structure: 2 points
-- Clear reasoning: 1 point
+- Two correct simple types: 2 points
+- Two correct composite types: 2 points
+- Clear examples: 1 point
 
-**Question 2: 1D vs 2D Arrays**
+**Question 2: Purpose of '\0' Character**
 **Expected Answer:**
-**One-dimensional arrays** are appropriate for:
-- Linear sequences of data
-- **Example:** Daily electricity consumption for a month
-- **Why:** Only one variable changes (day of month)
-
-**Two-dimensional arrays** are appropriate for:
-- Tabular data with two variables
-- **Example:** Monthly electricity consumption for a year
-- **Why:** Two variables change (month and day)
-
-**Key difference:** 1D arrays have one index, 2D arrays have two indices representing different dimensions of data.
+The '\0' character (null terminator) marks the end of C-style strings because:
+- **String termination:** Tells functions where the string ends
+- **Memory management:** Prevents reading beyond actual string content
+- **Function compatibility:** Required for string functions like strlen(), strcpy()
+- **Safety:** Prevents buffer overflows and undefined behavior
 
 **Grading (5 points):**
-- Clear comparison: 2 points
-- Appropriate examples: 2 points
-- Explanation of differences: 1 point
+- Clear explanation of purpose: 2 points
+- Two valid reasons: 2 points
+- Safety consideration: 1 point
 
 ---
 
@@ -120,42 +232,104 @@ For temperature data every hour for 7 days:
 5. **b) 19**
 
 ### Part 2: Programming Tasks (12 points)
-*(Same solutions as previous answer key)*
+
+**Task A: Daily Income Total**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    double income[5];
+    double total = 0;
+    
+    cout << "Enter daily income for 5 days:" << endl;
+    for(int i = 0; i < 5; i++) {
+        cout << "Day " << i+1 << ": ";
+        cin >> income[i];
+        total += income[i];
+    }
+    
+    cout << "Total income: " << total << endl;
+    return 0;
+}
+```
+
+**Task B: String Copy**
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char source[20], destination[20];
+    
+    strcpy(source, "Hello");
+    strcpy(destination, source);
+    
+    cout << "Source: " << source << endl;
+    cout << "Destination: " << destination << endl;
+    
+    return 0;
+}
+```
+
+**Task C: Average Temperature**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int temperatures[5];
+    double sum = 0;
+    
+    cout << "Enter 5 temperatures: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> temperatures[i];
+        sum += temperatures[i];
+    }
+    
+    double average = sum / 5;
+    cout << "Average temperature: " << average << endl;
+    
+    return 0;
+}
+```
 
 ### Part 3: Theory Application (10 points)
 
-**Question 1: Supermarket Sales Data**
+**Question 1: What is an Array?**
 **Expected Answer:**
-For tracking 10 products over 30 days:
-- **Data Type:** Two-dimensional array
-- **Structure:** `double sales[10][30]`
-- **Explanation:**
-  - Rows represent products (10 products)
-  - Columns represent days (30 days)
-  - `sales[i][j]` stores sales of product i on day j
-- **Design choice:** 2D array efficiently represents the product×day relationship
+An array is a composite data type that stores multiple values of the same type in a single variable. It's useful because:
+- **Organization:** Groups related data together (like daily temperatures)
+- **Efficiency:** Allows processing multiple values with loops
+- **Memory:** More efficient than declaring many separate variables
+- **Access:** Easy to access individual elements using indices
+
+**Example:** Instead of `temp1, temp2, temp3...`, use `temperatures[24]` for hourly temperatures.
 
 **Grading (5 points):**
-- Appropriate structure: 2 points
-- Clear organization: 2 points
-- Design justification: 1 point
+- Clear definition: 2 points
+- Two valid reasons: 2 points
+- Good example: 1 point
 
-**Question 2: Importance of Composite Types**
+**Question 2: String Functions**
 **Expected Answer:**
-Composite data types are essential because:
-1. **Real-world data is complex:** Student records contain multiple attributes (name, grades, ID)
-2. **Efficient organization:** Arrays group related data instead of using many separate variables
-3. **Practical processing:** Enables operations on entire datasets (sorting, searching, calculations)
+**strcpy()** - Copies one string to another
+- Example: `strcpy(dest, source)` copies source to dest
+- Used for C-style strings (char arrays)
 
-**Examples from theory:**
-- Electricity consumption data (arrays for monthly/yearly data)
-- Student names (strings/arrays of characters)
-- Temperature measurements (arrays for hourly data)
+**strcat()** - Concatenates (joins) two strings
+- Example: `strcat(str1, str2)` adds str2 to the end of str1
+- Used for C-style strings
+
+**strlen()** - Returns the length of a string
+- Example: `strlen("Hello")` returns 5
+- Used for both C-style strings and string type
 
 **Grading (5 points):**
-- Clear explanation of importance: 2 points
-- Real-world examples: 2 points
-- Connection to theory: 1 point
+- Two correct functions: 2 points
+- Clear explanations: 2 points
+- Good examples: 1 point
 
 ---
 
@@ -169,41 +343,108 @@ Composite data types are essential because:
 5. **c) Array of strings**
 
 ### Part 2: Programming Tasks (12 points)
-*(Same solutions as previous answer key)*
+
+**Task A: Daily Consumption Display**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    double consumption[3];
+    
+    cout << "Enter electricity consumption for 3 days:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Day " << i+1 << ": ";
+        cin >> consumption[i];
+    }
+    
+    cout << "Daily consumption:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Day " << i+1 << ": " << consumption[i] << endl;
+    }
+    
+    return 0;
+}
+```
+
+**Task B: String Concatenation**
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string firstName, lastName, fullName;
+    
+    firstName = "Ion";
+    lastName = "Popescu";
+    fullName = firstName + " " + lastName;
+    
+    cout << "Full name: " << fullName << endl;
+    return 0;
+}
+```
+
+**Task C: Count Positive Numbers**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+    int count = 0;
+    
+    cout << "Enter 5 numbers: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> arr[i];
+        if(arr[i] > 0) {
+            count++;
+        }
+    }
+    
+    cout << "Positive numbers: " << count << endl;
+    return 0;
+}
+```
 
 ### Part 3: Theory Application (10 points)
 
-**Question 1: Chess Board Representation**
+**Question 1: 1D vs 2D Arrays**
 **Expected Answer:**
-For representing a chess board (8x8 grid):
-- **Data Type:** Two-dimensional array
-- **Structure:** `char board[8][8]`
-- **Organization:**
-  - Rows represent ranks (1-8)
-  - Columns represent files (a-h)
-  - Each element stores piece information (e.g., 'K' for king, 'Q' for queen, ' ' for empty)
-- **Alternative:** Could use enumeration types for pieces
+**One-dimensional arrays** have one index and store linear data:
+- **Example:** Daily electricity consumption for a month: `float consumption[31]`
+- **Use when:** Data has only one changing variable (like day of month)
+
+**Two-dimensional arrays** have two indices and store tabular data:
+- **Example:** Monthly electricity consumption for a year: `float consumption[12][31]`
+- **Use when:** Data has two changing variables (like month and day)
+
+**Key difference:** 1D arrays use one index, 2D arrays use two indices for rows and columns.
 
 **Grading (5 points):**
-- Appropriate data type: 2 points
-- Clear organization: 2 points
-- Piece representation: 1 point
+- Clear distinction: 2 points
+- Correct examples: 2 points
+- Clear difference explanation: 1 point
 
-**Question 2: Array Indexing in C++**
+**Question 2: Char Arrays vs String Type**
 **Expected Answer:**
-**Zero-based indexing** means arrays start at index 0 because:
-- **Historical reasons:** C and C++ tradition from early computing
-- **Memory addressing:** Direct correspondence with memory offsets
-- **Mathematical convenience:** Simplifies pointer arithmetic
+We need both because they serve different purposes:
 
-**Practical implications:**
-- Must be careful with array bounds (accessing arr[size] causes errors)
-- Loops typically run from 0 to size-1
-- Can be counterintuitive for beginners used to 1-based counting
+**Char arrays (C-style strings):**
+- Fixed size, manual memory management
+- **Use when:** Working with C libraries, fixed-length data, or when memory control is important
+- **Example:** `char name[20]` for student names
+
+**String type:**
+- Dynamic size, automatic memory management
+- **Use when:** General string operations, unknown length, or when ease of use is important
+- **Example:** `string name` for general text processing
+
+**Reason:** Char arrays provide more control, string type provides more convenience.
 
 **Grading (5 points):**
-- Explanation of zero-based indexing: 2 points
-- Practical implications: 2 points
+- Clear comparison: 2 points
+- Appropriate usage scenarios: 2 points
 - Clear reasoning: 1 point
 
 ---
@@ -218,56 +459,108 @@ For representing a chess board (8x8 grid):
 5. **c) Automatic memory management**
 
 ### Part 2: Programming Tasks (12 points)
-*(Same solutions as previous answer key)*
+
+**Task A: String to Char Array**
+```cpp
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+int main() {
+    string strType = "Informatics";
+    char charArray[20];
+    
+    strcpy(charArray, strType.c_str());
+    cout << "Char array: " << charArray << endl;
+    
+    return 0;
+}
+```
+
+**Task B: Student Names**
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string students[3];
+    
+    cout << "Enter 3 student names:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Student " << i+1 << ": ";
+        getline(cin, students[i]);
+    }
+    
+    cout << "Student names:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << students[i] << endl;
+    }
+    
+    return 0;
+}
+```
+
+**Task C: Array Average**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+    double sum = 0;
+    
+    cout << "Enter 5 numbers: ";
+    for(int i = 0; i < 5; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+    
+    double average = sum / 5;
+    cout << "Average: " << average << endl;
+    
+    return 0;
+}
+```
 
 ### Part 3: Theory Application (10 points)
 
-**Question 1: Library Book Data**
+**Question 1: String Representations in C++**
 **Expected Answer:**
-For storing book information for 1000 books:
-- **Data Structure:** Array of structures or multiple parallel arrays
-- **Option 1 (Structures):**
-  ```cpp
-  struct Book {
-      string title;
-      string author;
-      int year;
-  };
-  Book library[1000];
-  ```
-- **Option 2 (Parallel arrays):**
-  ```cpp
-  string titles[1000];
-  string authors[1000];
-  int years[1000];
-  ```
-- **Choice justification:** Structures are better as they keep related data together
+**Char arrays (C-style strings):**
+- Fixed size, must specify maximum length
+- Manual memory management
+- **Use when:** Working with C libraries, fixed-length data, or when memory control is important
+- **Example:** `char name[20] = "Ion";`
+
+**String type:**
+- Dynamic size, automatic memory management
+- Built-in functions and operators
+- **Use when:** General string operations, unknown length, or when ease of use is important
+- **Example:** `string name = "Ion";`
+
+**Choice:** Use char arrays for compatibility with C code, string type for general C++ programming.
 
 **Grading (5 points):**
-- Appropriate structure design: 2 points
-- Multiple options presented: 2 points
-- Clear justification: 1 point
+- Clear description of both methods: 2 points
+- Appropriate usage scenarios: 2 points
+- Clear examples: 1 point
 
-**Question 2: strcpy() vs Assignment**
+**Question 2: Importance of Composite Data Types**
 **Expected Answer:**
-**strcpy() function:**
-- Used for C-style strings (char arrays)
-- Copies content from source to destination
-- **When to use:** When working with char arrays
-- **Limitations:** Must ensure destination has enough space
+Composite data types are important because:
+- **Organization:** Group related data together instead of using many separate variables
+- **Efficiency:** Process multiple values with loops instead of individual operations
+- **Real-world representation:** Better match real data structures (like student lists, temperature records)
+- **Memory management:** More efficient use of memory for related data
 
-**Simple assignment:**
-- Used for string type
-- `string1 = string2` copies the entire string
-- **When to use:** When working with string type
-- **Limitations:** Only works with string type, not char arrays
-
-**Key difference:** strcpy() is for char arrays, assignment is for string type. They serve similar purposes but for different string representations.
+**Example:** Instead of `temp1, temp2, temp3...`, use `temperatures[24]` for hourly data.
 
 **Grading (5 points):**
-- Clear comparison: 2 points
-- Usage scenarios: 2 points
-- Limitations explained: 1 point
+- Two valid reasons: 2 points
+- Clear explanation: 2 points
+- Good example: 1 point
 
 ---
 

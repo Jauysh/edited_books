@@ -51,9 +51,9 @@
 ### Part 3: Theory Application (10 minutes, 10 points)
 **Answer both questions**
 
-**Question 1:** Describe how you would use composite data types to represent the grades of 30 students in a class for 5 different subjects. Specify which data types you would use and how you would structure the data.
+**Question 1:** What is the difference between simple data types and composite data types? Give one example of each.
 
-**Question 2:** Explain the difference between using char arrays and string type for storing student names. Include at least two advantages of each approach.
+**Question 2:** For storing daily electricity consumption for a month, which data structure would you use and why?
 
 ---
 
@@ -103,9 +103,9 @@
 ### Part 3: Theory Application (10 minutes, 10 points)
 **Answer both questions**
 
-**Question 1:** A weather station records temperature every hour for 7 days. Describe how you would structure this data using composite data types. Specify the data types and explain your choice.
+**Question 1:** Give two examples of simple data types and two examples of composite data types.
 
-**Question 2:** Compare the use of one-dimensional arrays versus two-dimensional arrays. Provide an example scenario where each would be most appropriate and explain why.
+**Question 2:** What is the purpose of the '\0' character in C-style strings?
 
 ---
 
@@ -155,9 +155,9 @@
 ### Part 3: Theory Application (10 minutes, 10 points)
 **Answer both questions**
 
-**Question 1:** A supermarket wants to track daily sales of 10 different products over 30 days. Design a data structure using composite data types for this purpose. Explain your design choices.
+**Question 1:** What is an array and why is it useful for storing related data?
 
-**Question 2:** Discuss why composite data types are essential for representing real-world information like student records or inventory data. Provide specific examples from the theory you've studied.
+**Question 2:** Name two string functions in C++ and explain what each one does.
 
 ---
 
@@ -207,9 +207,9 @@
 ### Part 3: Theory Application (10 minutes, 10 points)
 **Answer both questions**
 
-**Question 1:** Describe how you would represent a chess board (8x8 grid) using composite data types. What data types would you use and how would you organize the data?
+**Question 1:** What is the difference between one-dimensional and two-dimensional arrays? Give one example use for each.
 
-**Question 2:** Explain the concept of array indexing in C++. Why do arrays start at index 0, and what practical implications does this have for programmers?
+**Question 2:** Why do we need both char arrays and string type in C++?
 
 ---
 
@@ -259,9 +259,9 @@
 ### Part 3: Theory Application (10 minutes, 10 points)
 **Answer both questions**
 
-**Question 1:** A library wants to store information about books: title, author, and publication year for 1000 books. Design an appropriate data structure using composite data types and explain your choices.
+**Question 1:** What are the two ways to represent strings in C++ and when would you use each?
 
-**Question 2:** Compare the strcpy() function with simple assignment for strings. When would you use each approach, and what are the limitations of each method?
+**Question 2:** Why is it important to use composite data types instead of many separate variables?
 
 ---
 
