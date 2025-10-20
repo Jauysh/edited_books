@@ -345,8 +345,228 @@ const EXAM_DATA = {
           expectedAnswer: "<Letter> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z"
         }
       ]
+    },
+    // Variant 3
+    {
+      number: 3,
+      theoreticalQuestions: [
+        {
+          question: "What conceptual process does algorithmization represent?",
+          options: ["A) Program implementation and testing", "B) Structured algorithm creation", "C) Computational theory study", "D) Information system design"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What comprises a performer's command repertoire?",
+          options: ["A) Software application collection", "B) Available instruction set", "C) System software components", "D) Programming language syntax"],
+          correctAnswer: "B"
+        },
+        {
+          question: "Which languages demonstrate high-level programming characteristics?",
+          options: ["A) Machine-level instruction sets", "B) C++, Pascal, Java platforms", "C) Binary encoding systems", "D) Assembly language dialects"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What essential activity defines programming?",
+          options: ["A) Computer architecture analysis", "B) Software development process", "C) Network communication", "D) Web application creation"],
+          correctAnswer: "B"
+        },
+        {
+          question: "How are non-terminal symbols represented syntactically?",
+          options: ["A) Circular or oval containers", "B) Rectangular enclosures", "C) Triangular markers", "D) Diamond shapes"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What characterizes machine language?",
+          options: ["A) Human-readable text format", "B) Binary instruction sequences", "C) Natural language expressions", "D) Symbolic communication"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What sequential stages comprise computer problem-solving?",
+          options: ["A) Exclusive program implementation", "B) Algorithm design, implementation, compilation, debugging", "C) Compilation process only", "D) Program execution exclusively"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What functional purpose does BNF metalanguage serve?",
+          options: ["A) Software development", "B) Formal syntax specification", "C) Database management", "D) Web technology"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What distinguishes terminal symbols in formal grammar?",
+          options: ["A) Basic lexical elements", "B) Abstract syntactic categories", "C) Reserved vocabulary", "D) Documentation elements"],
+          correctAnswer: "A"
+        },
+        {
+          question: "What representational method applies to BNF syntax diagrams?",
+          options: ["A) Flowchart methodology", "B) Graphical plotting", "C) Geometric shape combinations", "D) Tabular arrangements"],
+          correctAnswer: "C"
+        }
+      ],
+      practicalTasks: [
+        {
+          type: "programming",
+          description: "Create a C++ program outputting numerical sequence 1-3",
+          expectedAnswer: "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"1\" << endl;\n    cout << \"2\" << endl;\n    cout << \"3\" << endl;\n    return 0;\n}"
+        },
+        {
+          type: "identification",
+          description: "Determine letter-initial sequences:",
+          options: ["A) variable", "B) 1var", "C) _temp", "D) myName"],
+          correctAnswers: ["A", "D"]
+        },
+        {
+          type: "bnf",
+          description: "Define BNF production for signed integer notation",
+          expectedAnswer: "<Integer> ::= [+ | -] <Digit> {<Digit>}"
+        }
+      ]
+    },
+    // Variant 4
+    {
+      number: 4,
+      theoreticalQuestions: [
+        {
+          question: "What fundamental nature defines machine language?",
+          options: ["A) Natural language communication", "B) Binary instruction encoding", "C) Human language expression", "D) Gestural communication"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What systematic approach solves computational problems?",
+          options: ["A) Program writing exclusively", "B) Algorithm specification, implementation, translation, verification", "C) Translation process only", "D) Execution phase solely"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What analytical function does BNF metalanguage perform?",
+          options: ["A) Program composition", "B) Syntax formalization", "C) Data organization", "D) Web development"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What constitutes terminal symbols in formal definition?",
+          options: ["A) Elementary language tokens", "B) Grammatical categories", "C) Keyword elements", "D) Commentary text"],
+          correctAnswer: "A"
+        },
+        {
+          question: "What visualization technique represents BNF formally?",
+          options: ["A) Process flow depiction", "B) Mathematical graphing", "C) Geometric symbol arrangement", "D) Data tabulation"],
+          correctAnswer: "C"
+        },
+        {
+          question: "What integrated functionality defines development environments?",
+          options: ["A) Text editing capability", "B) Comprehensive programming tools", "C) Compilation services", "D) Operating system functions"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What operational capabilities do IDEs provide?",
+          options: ["A) Translation services only", "B) Editing, compilation, debugging integration", "C) Execution functionality", "D) File management"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What descriptive purpose do syntax diagrams serve?",
+          options: ["A) Mathematical function plotting", "B) Language syntax visualization", "C) Algorithm representation", "D) Hardware schematic design"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What abstract role do non-terminal symbols fulfill?",
+          options: ["A) Concrete language elements", "B) Grammatical constructs", "C) Numerical representations", "D) Alphabetic characters"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What linguistic information does syntax diagram traversal provide?",
+          options: ["A) Problem-solving strategy", "B) Grammatically valid constructs", "C) Program organization", "D) Logical procedure"],
+          correctAnswer: "B"
+        }
+      ],
+      practicalTasks: [
+        {
+          type: "programming",
+          description: "Implement a C++ program displaying academic subject preference",
+          expectedAnswer: "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"Mathematics\" << endl;\n    return 0;\n}"
+        },
+        {
+          type: "identification",
+          description: "Identify C++ reserved keywords:",
+          options: ["A) int (integer type)", "B) main (program entry)", "C) variable (user-defined)", "D) number (user-defined)"],
+          correctAnswers: ["A", "B"]
+        },
+        {
+          type: "bnf",
+          description: "Specify BNF grammar for identifier construction",
+          expectedAnswer: "<Identifier> ::= <Letter> {<Letter> | <Digit>}"
+        }
+      ]
+    },
+    // Variant 5
+    {
+      number: 5,
+      theoreticalQuestions: [
+        {
+          question: "What comprehensive toolset defines development environments?",
+          options: ["A) Text processing applications", "B) Integrated programming utilities", "C) Translation programs", "D) System software"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What functional integration characterizes modern IDEs?",
+          options: ["A) Compilation capability", "B) Code editing, translation, debugging", "C) Program execution", "D) Data storage"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What representational method describes syntax diagrams?",
+          options: ["A) Mathematical function graphs", "B) Language syntax illustration", "C) Algorithm flowcharting", "D) Technical drawing"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What grammatical function do non-terminal symbols perform?",
+          options: ["A) Concrete language tokens", "B) Abstract syntactic categories", "C) Numerical digits", "D) Alphabetic letters"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What linguistic validity does syntax path analysis establish?",
+          options: ["A) Problem solution methodology", "B) Syntactic construction correctness", "C) Program structural design", "D) Logical operation sequence"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What conceptual framework defines algorithms?",
+          options: ["A) Mathematical formalism", "B) Systematic problem-solving procedure", "C) Computer program implementation", "D) Programming language specification"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What operational commands characterize the Kangaroo performer?",
+          options: ["A) UP, DOWN, RIGHT, LEFT", "B) STEP, TURN, JUMP", "C) ADD, SUBTRACT, MULTIPLY", "D) IF, WHILE, REPEAT"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What operational distinction separates control modes?",
+          options: ["A) Execution speed differential", "B) Individual vs. sequential command execution", "C) Task complexity handling", "D) Functional equivalence"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What executable entity constitutes a program?",
+          options: ["A) Natural language algorithm description", "B) Automated instruction sequence", "C) Mathematical equation system", "D) Interactive software application"],
+          correctAnswer: "B"
+        },
+        {
+          question: "What descriptive utility do syntax diagrams provide?",
+          options: ["A) Algorithm visualization", "B) Programming language syntax illustration", "C) Data structure representation", "D) Program execution demonstration"],
+          correctAnswer: "B"
+        }
+      ],
+      practicalTasks: [
+        {
+          type: "programming",
+          description: "Develop a C++ program outputting current date information",
+          expectedAnswer: "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"October 20, 2025\" << endl;\n    return 0;\n}"
+        },
+        {
+          type: "identification",
+          description: "Recognize compound operator symbols:",
+          options: ["A) Less than or equal (<=)", "B) Greater than or equal (>=)", "C) Assignment operator (=)", "D) Addition operator (+)"],
+          correctAnswers: ["A", "B"]
+        },
+        {
+          type: "bnf",
+          description: "Define BNF production for arithmetic signs",
+          expectedAnswer: "<Sign> ::= + | -"
+        }
+      ]
     }
-    // Note: Variants 3-5 follow the same pattern
-    // For complete implementation, copy the full exam data from exam-data-config.js
   ]
 };
