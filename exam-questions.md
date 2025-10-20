@@ -429,7 +429,8 @@
 8. B
 9. A
 10. B
-11. ```cpp
+11. 
+```cpp
    #include <iostream>
    using namespace std;
    int main() {
