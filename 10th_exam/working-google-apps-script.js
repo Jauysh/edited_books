@@ -87,7 +87,7 @@ function createExamForm(variant, variantNumber) {
     form.addPageBreakItem().setTitle('Part 1: Theoretical Questions (20 minutes)');
     variant.theoreticalQuestions.forEach((question, index) => {
       const mcItem = form.addMultipleChoiceItem();
-      mcItem.setTitle(`Question ${index + 1}`)
+      mcItem.setTitle(`Question ${index + 1}: ${question.question}`)
         .setChoices(question.options.map(option => mcItem.createChoice(option)))
         .setRequired(true);
     });
